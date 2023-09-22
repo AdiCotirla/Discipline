@@ -1,0 +1,59 @@
+.navbar-container
+{
+    z-index: 9999;
+    display: flex;
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+}
+.navbar
+{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navbar-link
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    position: relative;
+    width: 19%;
+    height: 100%;
+}
+.click::after
+{
+    margin: 0;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    background-color:#ffffff;
+    left: 0;
+    bottom: 0;
+    /* border-radius: 25px; */
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.click:hover::after
+{
+     transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.logo
+{
+    width: 150px;
+    height: 80px;
+}
